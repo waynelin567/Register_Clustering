@@ -47,7 +47,7 @@ make -j8 -s
 | --help           |           |         |     Show this message.                                                 |
 
 # Quality and Performance
-The reported results are tested on a workstation with 197GB memory and 2 Intel Xeon E5-2650 v2 @ 2.6GHz CPUs. All with default arguments listed above.
+The reported results are tested on a workstation with 197GB memory and 2 Intel Xeon E5-2650 v2 @ 2.6GHz CPUs. All with default arguments listed above. The testcases can be found in the folder ```testcases/```. Please remember to decompress before feeding it to the program.   
 
 | Benchmark   | #Clusters | Cluster Size (Min/Max) | #Clusters of Size (1/80) | Displacement (Max/Avg) | Power Ratio | Runtime(s) |
 |:-----------:|:---------:|:----------------------:|:------------------------:|:----------------------:|:-----------:|:----------:|
