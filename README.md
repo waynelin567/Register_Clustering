@@ -1,5 +1,5 @@
 # RegisterClustering
-This repository implements our ISPD'19 paper: **Ya-Chu Chang, Tung-Wei Lin, Iris Hui-Ru Jiang, and Gi-Joon Nam. "Graceful Register Clustering by Effective Mean Shift Algorithm for Power and Timing Balancing."**  
+This repository implements our ISPD'19 paper: **Ya-Chu Chang, Tung-Wei Lin, Iris Hui-Ru Jiang, and Gi-Joon Nam. "Graceful Register Clustering by Effective Mean Shift Algorithm for Power and Timing Balancing."** [https://doi.org/10.1145/3299902.3309753](https://doi.org/10.1145/3299902.3309753)
 
 # Dependecies
 c++11  
