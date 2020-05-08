@@ -117,11 +117,11 @@ void Mgr::writeFile(const std::string& out_file)
                              << "LABEL" << std::endl;
     for (int i = 0; i < (int)_FFs.size(); i++)
     {
-        outfile << std::setw(50) <<  std::left << _FFs[i].getName()
-                << std::setw(15) << _FFs[i].getX() 
+        outfile << std::setw(75) << std::left << _FFs[i].getName()
+                << std::setw(15) << std::right << _FFs[i].getX() 
                 << std::setw(15) << _FFs[i].getY() 
                 << std::setw(10) << _FFs[i].getCID() << std::endl;
-    }
+    } 
     outfile.close();
     
 }
