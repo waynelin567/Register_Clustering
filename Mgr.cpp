@@ -111,10 +111,10 @@ void Mgr::writeFile(const std::string& out_file)
     outfile << "DIEAREA ( "
             << _origin.first << " " << _origin.second << " ) ( " 
             << _border.first << " " << _border.second << " )" << std::endl;
-    outfile << std::setw(50) << std::left << "name" 
-            << std::setw(15) << "X" << std::setw(15) 
-                             << "Y" << std::setw(10) 
-                             << "LABEL" << std::endl;
+    outfile << std::setw(75) << std::left  << "name" 
+            << std::setw(15) << std::right << "X" << std::setw(15) 
+                                           << "Y" << std::setw(10) 
+                                           << "LABEL" << std::endl;
     for (int i = 0; i < (int)_FFs.size(); i++)
     {
         outfile << std::setw(75) << std::left << _FFs[i].getName()
