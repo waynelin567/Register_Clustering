@@ -19,7 +19,7 @@ StableMatching::StableMatching()
     _clusters.resize (m.getFFSize());
     _FFs.resize(m.getClusterSize());
     for (int i = 0; i < m.getFFSize(); i++)
-        _clusters[i].reserve(capacity);
+        _clusters[i].reserve(m.getClusterSize());
 }
 bool StableMatching::run()
 {
@@ -62,8 +62,8 @@ void StableMatching::calcClusters(std::vector<FF_id>& order)
     {
         FF& nowFF = m.getFF (id);
         std::vector<PointWithID> resultClusters;
-        resultClusters.reserve (capacity);
-        _rtree.query (bgi::nearest (Point (nowFF.getOrigX(), nowFF.getOrigY()), capacity),
+        resultClusters.reserve (m.getClusterSize());
+        _rtree.query (bgi::nearest (Point (nowFF.getOrigX(), nowFF.getOrigY()), m.getClusterSize()),
         std::back_inserter (resultClusters));
 
         BOOST_FOREACH (PointWithID const & c, resultClusters)
@@ -126,7 +126,7 @@ bool StableMatching::prefersThisFF(Cluster_id cid, mDist dis)
 }
 void StableMatching::match(std::vector<FF_id>& order)
 {
-    auto& m = getMgr();
+    //auto& m = getMgr();
     for (int i = 0; i < (int)order.size(); i++)
     {
         FF_id fid = order[i];
@@ -135,8 +135,8 @@ void StableMatching::match(std::vector<FF_id>& order)
         {
             mDist      dis = _clusters[fid][j].first;
             Cluster_id cid = _clusters[fid][j].second;
-            Cluster& c = m.getCluster(cid);
-            if (c.isFull())
+            //Cluster& c = m.getCluster(cid);
+            if ((int)_FFs[cid].size() >= getParamMgr().MaxClusterSize)
             {
                 if (prefersThisFF(cid, dis))
                 {
