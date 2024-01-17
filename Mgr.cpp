@@ -169,7 +169,7 @@ void Mgr::printClusterStats()
     cout << "MAX cluster size: " <<max_cluster_size <<endl;
     cout << "MIN cluster size: " <<min_cluster_size << endl;
     cout << "clusters size is 1: " << counting << endl;
-    cout << "clusters size is 80: " << count80 << endl;
+    cout << "clusters size is " << getParamMgr().MaxClusterSize << ": " << count80 << endl;
     cout << "total displacement: " << totDisp << endl;
     cout << "max displacement: " << maxDisp << endl;
     cout << "avg displacement: " << avgDisp << endl;
