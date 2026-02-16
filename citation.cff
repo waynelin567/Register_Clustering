@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated ISPD 2019 paper."
+title: "Graceful register clustering by effective mean shift algorithm for power and timing balancing"
+authors:
+  - family-names: "Chang"
+    given-names: "Ya-Chu"
+  - family-names: "Lin"
+    given-names: "Tung-Wei"
+  - family-names: "Jiang"
+    given-names: "Iris Hui-Ru"
+  - family-names: "Nam"
+    given-names: "Gi-Joon"
+preferred-citation:
+  type: conference-paper
+  title: "Graceful register clustering by effective mean shift algorithm for power and timing balancing"
+  authors:
+    - family-names: "Chang"
+      given-names: "Ya-Chu"
+    - family-names: "Lin"
+      given-names: "Tung-Wei"
+    - family-names: "Jiang"
+      given-names: "Iris Hui-Ru"
+    - family-names: "Nam"
+      given-names: "Gi-Joon"
+  collection-title: "Proceedings of the 2019 International Symposium on Physical Design"
+  year: 2019
+  start: 11
+  end: 18
